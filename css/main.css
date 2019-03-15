@@ -1,0 +1,732 @@
+@font-face {
+font-family: 'Segoe UI Regular';
+src: url('fonts/SegoeUI.eot');
+src: url('fonts/SegoeUI.eot?#iefix') format('embedded-opentype'),
+url('fonts/SegoeUI.woff') format('woff'),
+url('fonts/SegoeUI.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Segoe UI Bold';
+src: url('fonts/SegoeUI-Bold.eot');
+src: url('fonts/SegoeUI-Bold.eot?#iefix') format('embedded-opentype'),
+url('fonts/SegoeUI-Bold.woff') format('woff'),
+url('fonts/SegoeUI-Bold.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+* {
+	box-sizing: border-box;
+}
+body {
+	background-color: #71bfff;
+	margin: 0;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI Regular';
+}
+.container {
+	width: 1160px;
+  	height: 718px;
+  	margin-top: 80px;
+  	margin-bottom: 80px;
+  	display: flex;
+}
+.choose-block {
+	width: 580px;
+	height: 718px;
+  	background-color: #e1f4ff;
+}
+.choose-block__container {
+	width: 500px;
+	margin: auto;
+}
+.choose-block__title {
+	margin-top: 0;
+	padding-top: 90px;
+	font-size: 25px;
+	font-family: 'Segoe UI Bold';
+}
+.range-box {
+	width: 100%;
+	background-color: #fff;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	padding: 30px 40px 40px 40px;
+}
+.range-box__range {
+	display: flex;
+    justify-content: center;
+	padding-top: 21px;
+	padding-bottom: 33px;
+}
+
+.range-box__range input[type=range] {
+	-webkit-appearance: none;
+	width: 420px;
+	height: 4px;
+  	border-radius: 2px;
+  	background-color: #d1e3f2;
+}
+.range-box__range input[type=range]:focus {
+outline: none;
+}
+/* Бегунок в Хроме */
+.range-box__range input[type=range]::-webkit-slider-thumb {
+	width: 14px;
+  	height: 27px;
+  	border-radius: 5px;
+  	background-color: #006bcc;
+  	cursor: pointer;
+  	-webkit-appearance: none;
+}
+/* Бегунок в Мозиле */
+.range-box__range input[type=range]::-moz-range-thumb {
+	width: 14px;
+  	height: 27px;
+  	border-radius: 5px;
+  	background-color: #006bcc;
+  	cursor: pointer;
+}
+.range-box__values {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 41px;
+	position: relative;
+}
+.range-box__description {
+	margin: auto;
+	font-size: 16px;
+	display: flex;
+	padding-top: 41px;
+}
+.range-box__values:after {
+	content: "";
+	width: 100%;
+	height: 1px;
+	display: block;
+	background: #eee;
+	position: absolute;
+	bottom: 0;
+}
+.range-box__description-quote {
+	width: 10px;
+  	height: 12px;
+  	background-color: #006bcc;
+  	margin-right: 7px;
+  	transform: skew(-13deg);
+  	position: relative;
+    top: 5px;
+}
+.range-box__description-quote:nth-child(2) {
+	margin-right: 13px;
+}
+.range-box__description-mobile {
+	display: none;
+}
+.choose-box__boxes {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 50px;
+}
+.body-box__title, .face-box__title {
+	font-size: 25px;
+	font-family: 'Segoe UI Bold';
+	margin-bottom: 30px;
+}
+.body-box__choose, .face-box__choose {
+	background: #fff;
+	display: flex;
+}
+.choose-box__square {
+	width: 60px;
+	height: 60px;
+	margin: 15px 15px 15px 0;
+	border-radius: 8px;
+	border: 1px solid #d6d6d6;
+	cursor: pointer;
+}
+.choose-box__square:first-child {
+	margin-left: 15px;
+}
+.choose-box__square_active {
+	border: 3px solid #006bcc;
+}
+.choose-box__square_active:before {
+	content: "";
+	background: #006bcc;
+	width: 5px;
+ 	height: 5px;
+ 	display: block;
+ 	border-radius: 50%;
+ 	position: relative;
+ 	top: 3px;
+ 	left: 3px;
+}
+.body-box__choose {
+	background-size: 82%;
+}
+.body-box__body-blue {
+	background: url('../img/body_blue.png') center 10px no-repeat ;
+	background-size: inherit;
+}
+.body-box__body-green {
+	background: url('../img/body_green.png') center 10px no-repeat ;
+	background-size: inherit;
+}
+.body-box__body-pink {
+	background: url('../img/body_pink.png') center 10px no-repeat ;
+	background-size: inherit;
+}
+.face-box__choose {
+	background-size: 130%;
+}
+.face-box__face-smile {
+	background: url('../img/face-smile.png') center -10px no-repeat;
+	background-size: inherit;
+}
+.face-box__face-bear {
+	background: url('../img/face-bear.png') center -10px no-repeat;
+	background-size: inherit;
+}
+.face-box__face-scream {
+	background: url('../img/face-scream.png') center -10px no-repeat;
+	background-size: inherit;
+}
+.result-block {
+	margin: auto;
+	background: #fff;
+	width: 580px;
+	height: 718px;
+}
+.result-block__container {
+	width: 500px;
+	margin: auto;
+	padding-top: 30px;
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.skills {
+	height: 220px;
+	width: 356px;
+	margin: auto;
+	position: relative;
+  	transition: 1s;
+}
+.skill__square {
+	border-radius: 5px;
+  	background-color: #006bcc;
+  	margin-bottom: 5px;
+  	text-align: center;
+  	color: #fff;
+  	padding: 0;
+  	display: inline-block;
+  	position: absolute;
+  	transition: 1s;
+}
+.skill__square_big {
+	font-size: 21px;
+}
+.skill__square_middle {
+	font-size: 16px;
+}
+.skill__square_small {
+	font-size: 12px;
+}
+.middle .skill__square_big {
+	font-size: 20px;
+}
+.middle .skill__square_middle {
+	font-size: 15px;
+}
+.middle .skill__square_small {
+	font-size: 11px;
+}
+.senior .skill__square_big {
+	font-size: 18px;
+}
+.senior .skill__square_middle {
+	font-size: 14px;
+}
+.skill_HTML {
+	left: 70px;
+	top: 10px;
+	width: 89px;
+	line-height: 45px;
+}
+.skill_CSS {
+	left: 170px;
+	top: 16px;
+	width: 51px;
+	line-height: 34px;
+}
+.skill_SQL {
+	right: 77px; 
+	top: 13px;
+	width: 41px;
+	line-height: 26px;
+}
+.skill_Adaptive {
+	left: 10px;
+	top: 80px;
+	width: 89px;
+	line-height: 34px;
+}
+.skill_BaseJS {
+	left: 122px;
+	top: 71px;
+	width: 105px;
+	line-height: 46px;
+}
+.skill_Webpack {
+	right: 10px;
+	top: 50px;
+	width: 108px;
+	line-height: 40px;
+}
+.skill_Git {
+	right: 77px;
+	top: 105px;
+	width: 33px;
+	line-height: 25px;
+}
+.skill_Pug {
+	right: 10px;
+	top: 104px;
+	width: 51px;
+	line-height: 34px;
+}
+.skill_ESLint {
+	left: 58px;
+	top: 134px;
+	width: 67px;
+	line-height: 34px;
+}
+.skill_Gulp {
+	left: 141px;
+	top: 133px;
+	width: 73px;
+	line-height: 43px;
+}
+.skill_SASS {
+	right: 83px;
+	top: 142px;
+	width: 47px;
+	line-height: 26px;
+}
+.middle .skill_Adaptive {
+    left: 33px;
+    top: 72px;
+    width: 86px;
+    line-height: 33px;
+}
+.middle .skill_BaseJS {
+    left: 126px;
+    top: 69px;
+    width: 99px;
+    line-height: 40px;
+}
+.middle .skill_ESLint {
+    left: 53px;
+    top: 115px;
+    width: 65px;
+    line-height: 32px;
+}
+.middle .skill_Gulp {
+    left: 126px;
+    top: 120px;
+    width: 73px;
+    line-height: 39px;
+}
+.middle .skill_SASS {
+    right: 96px;
+    top: 127px;
+}
+.middle .skill_Git {
+    right: 80px;
+    top: 97px;
+    width: 33px;
+    line-height: 25px;
+}
+.middle .skill_Webpack {
+    right: 21px;
+    top: 50px;
+    width: 100px;
+    line-height: 38px;
+}
+.middle .skill_Pug {
+	right: 19px;
+    top: 94px;
+}
+.middle .skill_HTML {
+    left: 85px;
+    top: 20px;
+    width: 78px;
+    line-height: 39px;
+}
+.skill_TDD {
+	right: 17px;
+	top: 8px;
+	width: 52px;
+	line-height: 28px;
+}
+.skill_JS {
+	right: 89px;
+    top: 161px;
+    width: 31px;
+    line-height: 27px;
+}
+.skill_Canvas {
+	left: 138px;
+    top: 167px;
+    width: 90px;
+    line-height: 38px;
+}
+.skill_SVG {
+	left: 74px;
+    top: 162px;
+    width: 50px;
+    line-height: 31px;
+}
+.skill_Bash {
+    left: 0px;
+    top: 0px;
+    width: 45px;
+    line-height: 29px;
+}
+.skill_CI {
+    left: 0px;
+    top: 125px;
+    width: 50px;
+    line-height: 29px;
+}
+.skill_React {
+    right: 9px;
+    top: 136px;
+    width: 65px;
+    line-height: 35px;
+}
+.skill_D3 {
+    left: 16px;
+    top: 161px;
+    width: 50px;
+    line-height: 37px;
+}
+.skill_Vue {
+	left: 62px;
+    top: 200px;
+    width: 43px;
+    line-height: 28px;
+}
+.skill_SPA {
+    left: 28px;
+    top: 34px;
+    width: 50px;
+    line-height: 33px;
+}
+.skill_ES6 {
+    right: 35px;
+    top: 179px;
+    width: 48px;
+    line-height: 31px;
+}
+.senior .skill_Adaptive {
+    left: 49px;
+    top: 69px;
+    width: 68px;
+    line-height: 30px;
+}
+.senior .skill_BaseJS {
+    left: 126px;
+    top: 63px;
+    width: 70px;
+    line-height: 30px;
+}
+.senior .skill_ESLint {
+    left: 79px;
+    top: 103px;
+    width: 54px;
+    line-height: 30px;
+}
+.senior .skill_Gulp {
+    left: 140px;
+    top: 97px;
+    width: 63px;
+    line-height: 32px;
+}
+.senior .skill_SASS {
+    right: 110px;
+    top: 106px;
+    width: 38px;
+}
+.senior .skill_Git {
+    right: 74px;
+    top: 97px;
+    width: 33px;
+    line-height: 25px;
+}
+.senior .skill_Webpack {
+	right: 78px;
+    top: 55px;
+    width: 76px;
+    line-height: 32px;
+}
+.senior .skill_Pug {
+	right: 19px;
+    top: 94px;
+}
+.senior .skill_HTML {
+    left: 99px;
+    top: 26px;
+    width: 67px;
+    line-height: 32px;
+}
+.senior .skill_TDD {
+    right: 28px;
+    top: 13px;
+    width: 47px;
+    line-height: 28px;
+}
+.senior .skill_JS {
+    right: 86px;
+    top: 135px;
+    width: 31px;
+    line-height: 27px;
+}
+.senior .skill_Canvas {
+    left: 155px;
+    top: 136px;
+    width: 77px;
+    line-height: 31px;
+}
+.senior .skill_SVG {
+    left: 107px;
+    top: 146px;
+    width: 43px;
+    line-height: 31px;
+}
+.senior .skill_Bash {
+    left: 41px;
+    top: 0px;
+    width: 45px;
+    line-height: 29px;
+}
+.senior .skill_CI {
+    left: 0px;
+    top: 31px;
+    width: 47px;
+    line-height: 29px;
+}
+.senior .skill_React {
+    right: 16px;
+    top: 136px;
+    width: 65px;
+    line-height: 35px;
+}
+.senior .skill_D3 {
+    left: 5px;
+    top: 143px;
+    width: 48px;
+    line-height: 30px;
+}
+.senior .skill_Vue {
+    left: 59px;
+    top: 141px;
+    width: 40px;
+    line-height: 26px;
+}
+.senior .skill_SPA {
+    left: 54px;
+    top: 34px;
+    width: 41px;
+    line-height: 28px;
+}
+.senior .skill_ES6 {
+    right: 35px;
+    top: 179px;
+    width: 48px;
+    line-height: 31px;
+}
+.senior .skill_SQL {
+    right: 85px;
+    top: 23px;
+    width: 41px;
+    line-height: 26px;
+}
+.skill_ThreeJs {
+    left: 0px;
+    top: 179px;
+    width: 60px;
+    line-height: 31px;
+}
+.skill_WebGL {
+    left: 15px;
+    top: 107px;
+    width: 55px;
+    line-height: 31px;
+}
+.skill_Chrome {
+    left: 67px;
+    top: 185px;
+    width: 103px;
+    line-height: 31px;
+}
+.skill_Node {
+    right: 12px;
+    top: 49px;
+    width: 57px;
+    line-height: 31px;
+}
+.skill_Express {
+    right: 53px;
+    top: 217px;
+    width: 62px;
+    line-height: 31px;
+}
+.skill_Architecture {
+    right: 96px;
+    top: 179px;
+    width: 79px;
+    line-height: 31px;
+}
+.middle .skill__square {
+	/* transform: scale(0.96); */
+}
+.skills__middle, .skills__senior {
+	opacity: 0;
+}
+.middle .skills__middle, .senior .skills__senior {
+	opacity: 1;
+}
+.person {
+	text-align: center;
+	margin: auto;
+	margin-top: 40px;
+	position: relative;
+}
+.person__body {
+	background: url('../img/body_blue.png') no-repeat center top;
+}
+.person__body-green {
+	background-image: url('../img/body_green.png');
+}
+.person__body-pink {
+	background-image: url('../img/body_pink.png');
+}
+.person__mac {
+	width: 123px;
+	height: 81px;
+	border-radius: 15px;
+	background: #ffffff url('../img/apple.png') center no-repeat;
+	background-size: 30%;
+	position: relative;
+	top: -100px;
+	margin: auto;
+	z-index: 1;
+}
+.person__table {
+	position: absolute;
+	bottom: 55px;
+	margin: auto;
+    width: 100%;
+}
+.person__table_top {
+	margin: auto;
+	border-bottom: 50px solid #c4d1e8;
+	border-left: 55px solid transparent;
+	border-right: 55px solid transparent;
+	height: 0;
+	width: 356px;
+}
+.person__table-side {
+	width: 356px;
+  	height: 27px;
+  	background-color: #99acc6;
+  	margin: auto;
+}
+@media (max-width: 1200px) {
+	.container {
+		margin-top: 15px;
+		margin-bottom: 15px;
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+	.choose-block {
+		margin: auto;
+	}
+}
+@media (max-width: 768px) {
+	.choose-block, .result-block {
+		width: 560px;
+	}
+}
+@media (max-width: 576px) {
+	.container {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.choose-block, .result-block {
+		width: 100%;
+	}
+	.choose-block {
+		background: #fff;
+		height: auto;
+		border: 10px solid #71bfff;
+	}
+	.choose-block__container, .result-block__container {
+		width: 87%;
+	}
+	.range-box {
+		padding: 0;
+	}
+	.choose-box__boxes {
+		flex-wrap: wrap;
+	}
+	.person__table_top, .person__table-side {
+		width: 278px;
+	}
+	.result-block {
+		width: 100%;
+	}
+	.skills {
+		zoom: 0.9;
+	}
+	.choose-block__title {
+		padding-top: 40px;
+		margin-bottom: 0;
+	}
+	.range-box__range {
+		padding-top: 41px;
+	}
+	.range-box {
+		margin-top: 0;
+	}
+	.choose-box__boxes {
+		margin-top: 40px;
+	}
+	.body-box__title, .face-box__title {
+		margin-bottom: 20px;
+	}
+	.choose-box__square {
+		margin-top: 0;
+		margin-bottom: 40px;
+	}
+	.choose-box__square:first-child {
+		margin-left: 0;
+	}
+}
+@media (max-width: 480px) {
+	.skills {
+		zoom: 0.74;
+	}
+}
+@media (max-width: 330px) {
+	.range-box__description-mobile {
+	display: inline-block;
+	}
+}

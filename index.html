@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Тестовое задание</title>
+	<link rel="stylesheet" href="css/main.css">
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="choose-block">
+			<div class="choose-block__container">
+				<h2 class="choose-block__title">Грейды для frontend</h2>
+				<div class="range-box">
+					<div class="range-box__range">
+						<input type="range" min="0" max="2" step="1" value="0">
+					</div>
+					<div class="range-box__values">
+						<span class="range-box__value">Junior</span>
+						<span class="range-box__value">Middle</span>
+						<span class="range-box__value">Senior</span>
+					</div>
+					
+					<div class="range-box__description">
+						<div class="range-box__description-quote"></div>
+						<div class="range-box__description-quote"></div>
+						<div class="range-box__description-text">Переход на следующий <br class="range-box__description-mobile">грейд — улучшение качества кода и увеличение ответственности.</div>
+					</div>
+				</div>
+				<div class="choose-box__boxes">
+					<div class="body-box">
+						<div class="body-box__title">Тело</div>
+						<div class="body-box__choose">
+							<div id="body-blue" class="choose-box__square body-box__body-blue choose-box__square_active choose-box__body"></div>
+							<div id="body-green"class="choose-box__square body-box__body-green choose-box__body"></div>
+							<div id="body-pink"class="choose-box__square body-box__body-pink choose-box__body"></div>
+						</div>
+					</div>
+					<div class="face-box">
+						<div class="face-box__title">Лицо</div>
+						<div class="face-box__choose">
+							<div id="face-box-1" class="choose-box__square face-box__face-smile choose-box__face choose-box__square_active"></div>
+							<div id="face-box-2" class="choose-box__square face-box__face-bear choose-box__face "></div>
+							<div id="face-box-3" class="choose-box__square face-box__face-scream choose-box__face "></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="result-block">
+			<div class="result-block__container">
+				<div class="skills">
+					<div class="skill__square skill__square_big skill_HTML">HTML</div>
+					<div class="skill__square skill__square_middle skill_CSS">CSS</div>
+					<div class="skill__square skill__square_small skill_SQL">SQL</div>
+					<div class="skill__square skill__square_middle skill_Adaptive">Adaptive</div>
+					<div class="skill__square skill__square_big skill_BaseJS">Base JS</div>
+					<div class="skill__square skill__square_middle skill_Webpack">Webpack</div>
+					<div class="skill__square skill__square_small skill_Git">Git</div>
+					<div class="skill__square skill__square_middle skill_Pug">Pug</div>
+					<div class="skill__square skill__square_middle skill_ESLint">ESLint</div>
+					<div class="skill__square skill__square_big skill_Gulp">Gulp</div>
+					<div class="skill__square skill__square_small skill_SASS">SASS</div>
+					<div class="skill__square skill__square_middle skills__middle skill_TDD">TDD</div>
+					<div class="skill__square skill__square_small skills__middle skill_JS">JS</div>
+					<div class="skill__square skill__square_big skills__middle skill_Canvas">Canvas</div>
+					<div class="skill__square skill__square_middle skills__middle skill_SVG">SVG</div>
+					<div class="skill__square skill__square_middle skills__middle skill_Bash">Bash</div>
+					<div class="skill__square skill__square_middle skills__middle skill_CI">CI/CD</div>
+					<div class="skill__square skill__square_middle skills__middle skill_React">React</div>
+					<div class="skill__square skill__square_middle skills__middle skill_D3">D3.js</div>
+					<div class="skill__square skill__square_small skills__middle skill_Vue">Vue</div>
+					<div class="skill__square skill__square_middle skills__middle skill_SPA">SPA</div>
+					<div class="skill__square skill__square_middle skills__middle skill_ES6">ES6</div>
+					<div class="skill__square skill__square_middle skills__senior skill_ThreeJs">ThreeJs</div>
+					<div class="skill__square skill__square_middle skills__senior skill_WebGL">WebGL</div>
+					<div class="skill__square skill__square_small skills__senior skill_Chrome">Chrome Extensions</div>
+					<div class="skill__square skill__square_big skills__senior skill_Node">Node</div>
+					<div class="skill__square skill__square_middle skills__senior skill_Express">Express</div>
+					<div class="skill__square skill__square_small skills__senior skill_Architecture">Architecture</div>
+
+				</div>
+				<div class="person">
+					<div id="person__body" class="person__body">
+						<img id="person__face" src="img/face-smile.png" alt="">
+					</div>
+					<div class="person__mac"></div>
+					<div class="person__table">
+						<div class="person__table_top"></div>
+						<div class="person__table-side"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
